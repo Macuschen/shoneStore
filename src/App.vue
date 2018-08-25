@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     <router-view/>
+    <div>{{a}}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return {
+      a:10
+    }
+  },
+  created () {
+    console.log(this.$store.state)
+  },
+  mounted() {
+    console.log(this.$store.state);
+    
+  },
 }
 </script>
 
